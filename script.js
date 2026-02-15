@@ -298,8 +298,6 @@ function initializeGallery() {
         img.src = thumbSrc;
         img.loading = 'lazy';
         img.alt = 'Fotografie z Absolventského Velehradu ' + (index + 1);
-        img.width = 400;
-        img.height = 300;
         item.appendChild(img);
         return item;
     };
