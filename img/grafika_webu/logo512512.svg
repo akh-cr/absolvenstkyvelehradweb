@@ -1,0 +1,56 @@
+<svg 
+  width="512" 
+  height="512" 
+  viewBox="0 0 512 512" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Removed filter reference from the <g> element -->
+  <g>
+    <path 
+      d="M130 100C130 92.268 136.268 86 144 86H258.857C266.589 86 272.857 92.268 272.857 100V261.524C272.857 269.256 266.589 275.524 258.857 275.524H144C136.268 275.524 130 269.256 130 261.524V100Z" 
+      fill="#2C677B"
+    />
+    <rect 
+      x="164.286" 
+      y="241.238" 
+      width="108.572" 
+      height="150.477" 
+      rx="14" 
+      fill="#E0B73B"
+    />
+    <rect 
+      x="238.588" 
+      y="120.286" 
+      width="142.857" 
+      height="155.238" 
+      rx="14" 
+      fill="#BA5D3F"
+    />
+    <rect 
+      x="238.572" 
+      y="241.238" 
+      width="108.572" 
+      height="184.762" 
+      rx="14" 
+      fill="#2A77A0"
+    />
+    <rect 
+      x="238.572" 
+      y="120.286" 
+      width="34.2858" 
+      height="271.429" 
+      fill="white"
+    />
+    <path 
+      d="M198.572 166H312.858V200.286H198.572V166Z" 
+      fill="white"
+    />
+    <path 
+      d="M164.286 241.238H347.143V275.524H164.286V241.238Z" 
+      fill="white"
+    />
+  </g>
+  <!-- Removed the <filter> definition entirely from <defs> -->
+  <defs></defs>
+</svg>

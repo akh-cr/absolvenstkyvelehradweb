@@ -3,77 +3,658 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absolventský palhrad</title>
+    <title>Absolventský Velehrad 2027</title>
+    <link rel="icon" type="image/svg+xml" href="img/grafika_webu/logo512512.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Absolventský palhrad</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Domů</a></li>
-                <li><a href="#about">O projektu</a></li>
-                <li><a href="#features">Funkce</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="img/grafika_webu/logo512512.svg" alt="AV Logo">
+                <span class="nav-logo-text">Absolventský Velehrad</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Úvodní strana</a></li>
+                <li><a href="#registrace">Registrace</a></li>
+                <li><a href="#program-akce">Program</a></li>
+                <li><a href="#av_tym">AV tým</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#tema">Téma</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="container">
-            <h2>Vítejte na Absolventském palhradě</h2>
-            <p>Sdílení znalostí a zkušeností absolventů pro budoucí generace</p>
-            <button class="cta-button">Začít</button>
-        </div>
-    </header>
+    <!-- Hero Section with Parallax -->
+    <div id="hero">
+        <div class="layer-background layer" data-depth="0.10" data-type="parallax"></div>
+        <div class="layer-1 layer" data-depth="0.20" data-type="parallax">
+            <div class="layer1-content">
+                <img src="img/grafika_webu/logo512512.svg" alt="Logo" class="layer1-logo">
+                <h2 class="layer1-title">Absolventský<br>Velehrad 2027</h2>
+                <div class="layer1-subtitle">
+                    <hr class="subtitle-line">
+                    <span>Těšíme se na Vás</span>
+                    <hr class="subtitle-line">
+                </div>
+                <p class="layer1-date-text">19. – 22. 8. 2027</p>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>O projektu</h2>
-            <p>
-                Absolventský palhrad je platforma zaměřená na propojení absolventů 
-                a sdílení jejich zkušeností a znalostí. Cílem je vytvořit komunitu, 
-                kde se mohou absolventi vzájemně podporovat a inspirovat.
-            </p>
+            </div>
         </div>
-    </section>
+        <div class="layer-cloud-top-right layer" data-depth="0.30" data-type="parallax"></div>
+        <div class="layer-cloud-top-left layer" data-depth="0.30" data-type="parallax"></div>
+        <div class="layer-sun layer" data-depth="0.40" data-type="parallax"></div>
+        <div class="layer-cloud-bottom-left layer" data-depth="0.55" data-type="parallax"></div>
+        <div class="layer-cloud-bottom-right layer" data-depth="0.55" data-type="parallax"></div>
+        <div class="layer-velehrad layer" data-depth="0.90" data-type="parallax"></div>
+    </div>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Hlavní funkce</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Sdílení zkušeností</h3>
-                    <p>Sdílejte své příběhy a zkušenosti se zbytkem komunity.</p>
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Registration & About Section -->
+        <div class="section-container about-section">
+
+            <!-- Registration buttons hidden for 2027 -->
+            <div class="registration-info-container" style="display: none;">
+                <a class="main-button prihlaska" href="https://app.absolventskyvelehrad.cz/#/form/av2025">Přihláška zde</a>
+                <p class="info-text">aktuální v aplikaci:</p>
+                <a class="main-button aplikace" href="https://app.absolventskyvelehrad.cz/">
+                    <img class="button-icon" src="img/grafika_webu/logo512512.png" alt="App Icon"> AV 2025
+                </a>
+                <div class="app-store-buttons-container">
+                    <a class="app-store-text-button" href="https://apps.apple.com/us/app/absolventsky-velehrad/id6744650022" target="_blank" rel="noopener noreferrer">Apple App Store</a>
+                    <a class="app-store-text-button" href="https://play.google.com/store/apps/details?id=fstapp.AV25" target="_blank" rel="noopener noreferrer">Google Play Store</a>
                 </div>
-                <div class="feature-card">
-                    <h3>Síťování</h3>
-                    <p>Navážejte nové kontakty a budujte profesionální vztahy.</p>
+            </div>
+
+            <h2 class="about-heading">O Absolventském Velehradě</h2>
+            <p class="about-text">Absolventský Velehrad je čtyřdenní setkání mladých lidí, které se koná každé dva roky na významném poutním místě Velehrad. Akce nabízí společné slavení eucharistie, přednášky, diskuze, workshopy i prostor pro ztišení. Je to příležitost strávit čas s přáteli, poznat nové lidi, myšlenky a perspektivy.</p>
+            <p class="theme-intro">Tématem AV25 bylo <strong>V ROVNOVÁZE</strong>.</p>
+
+            <!-- Thematic Accordion -->
+            <div class="theme-details-container" id="tema">
+                <p class="user-hint">Rozvrh jednotlivých podtémat V ROVNOVÁZE</p>
+
+                <button class="theme-day-toggle" type="button">ČTVRTEK: Duchovní život v rovnováze<span class="icon-text">+</span></button>
+                <div class="theme-day-content">
+                    <div class="theme-day-content-inner">
+                        <p class="theme-subtitle">(2 Sam 11, 1-27; 12, 1-20)</p>
+                        <p>Příběh krále Davida a jeho zneužití moci k usmrcení soka nám představuje příkladný duchovní život v nerovnováze. David, dalo by se říci, „usnul na vavřínech slávy". Stal se králem a zpohodlněl. Už první verš jedenácté kapitoly zmiňuje, že se jednalo o dobu, kdy všichni králové táhli do boje. David ale ne. Zůstal v paláci a nedělal nic. Poměrně neslýchaná skutečnost. Zatímco všichni králové bojují, David, jako král, který měl jet v čele vojska do boje, nikam nejde a fláká se. A právě proto, že není tam, kde má být, narazí na Bat-šebu, ženu Chetity Uriáše, kterou se rozhodne získat.</p>
+                        <p>Francouzský jezuitský kněz Jean-Pierre de Caussade napsal útlou, ale obsahově velmi výživnou knížku s názvem „Odevzdanost do Boží prozřetelnosti: Síla přítomného okamžiku". V knize uvažuje o tom, co prakticky znamená pro křesťana Boží vůle a jak ji rozeznat. Největší milostí pro člověka je dle Caussada přítomný okamžik. Dochází k myšlenkám, že základní Boží vůlí pro náš život je očekávání Boha, že budeme prostě dělat to, co je naší povinností („Jsme jenom služebníci, učinili jsme to, co jsme byli povinni učinit."). Svatost světců nespočívala v tom, že si dělali, co chtěli, ale v tom, že dělali to, co měli a byli tam, kde měli být. Nebyly to kupodivu velké skutky světového rázu, ale prostý život sestávající z běžných činností. Zachovali řád a řád (Bůh) zachoval je. A díky tomu mohl Bůh v jejich životě mocně působit.</p>
+                        <p>Z Davidova příběhu si tedy můžeme odnést několik tipů, jak rozlišit, zda se náš duchovní život nachází v ne/rovnováze. Když svůj život nahlédneme s odstupem, můžeme se sami sebe ptát, jak ne/plníme své povinnosti, zda ne/jsme otrávení, ne/kalkulujeme, zda se ne/nudíme, ne/staráme o druhé lidi … nebo jestli jsme ne/schopni přijmout zpětnou vazbu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Mentoring</h3>
-                    <p>Získejte rady od zkušenějších absolventů nebo je poskytujte sami.</p>
+
+                <button class="theme-day-toggle" type="button">PÁTEK: Psychika v rovnováze<span class="icon-text">+</span></button>
+                <div class="theme-day-content">
+                    <div class="theme-day-content-inner">
+                        <p class="theme-subtitle">(Žalm 88)</p>
+                        <p>Dalo by se říci, že Žalm 88 je jedním z nejvíce depresivních žalmů, které v Bibli můžeme nalézt. Vyjadřuje naprosté zdrcení člověka, který prožívá těžkou duševní nepohodu a momentálně vnímá svoji situaci jako zcela bezvýchodnou. Tento žalm je také pevnou součástí Breviáře, najdeme ho v modlitbě kompletáře pro páteční den. Proto bychom neměli zapomínat, že nehledě na to, v jak temném životním období se nacházíme, celá církev je s naším utrpením skrze tento žalm spojena v modlitbě a modlí se i za nás. Autor žalmu zde v podstatě popisuje něco jako „duševní smrt". Stav, kdy je člověk opravdu v koncích. Přesto je to jeden z nejvíce nadějných žalmů vůbec. Proto nám ho také Bible předkládá k modlitbě jako vzor. A proč?</p>
+                        <p>Za prvé, žalmista si nic nenalhává. Své vnitřní prožívání popisuje poměrně syrově a naturalisticky. Přiznává si, že absolutně nemá řešení, nemá energii a nemá ani psychickou kapacitu. Neztratit kontakt s realitou ani v nejtěžších chvílích života je klíčovým předpokladem pro to, aby v nich mohl Bůh působit svou uzdravující mocí. Pokud se však uchylujeme k psychickým únikům, kličkám, pokud přemalováváme hnědou na bílou, jenom abychom se nemuseli dívat na to, co nám není příjemné, vnášíme do svého života faleš a vzdalujeme se pravdivosti, kterou zprostředkovává právě ono usazení psychiky v realitě. Bůh může uzdravit jen to, co je upřímné, pravdivé, realistické a skutečné. Tedy všechno, co je nemocné, může být uzdraveno, pokud je to přijato pravdivě a s láskou.</p>
+                        <p>Za druhé, postoj žalmisty. Neuzavírá se sám do sebe se svou bolestí, ale celou záležitost komunikuje a konzultuje s Bohem. Bůh může proměnit a vstoupit jen do toho, co mu otevřeme a předneseme. Dokud vedeme s Bohem rozhovor v modlitbě, neztrácíme světlo na konci jakkoliv temného tunelu. Bůh však působí také v druhých lidech, proto nás může uzdravovat i skrze zprostředkovanou pomoc (duchovní rozhovory, duchovní doprovázení, zpověď, psychoterapie). Psychika v rovnováze proto může znamenat i říct si včas o pomoc a rozprostřít své síly do vícero opěrných bodů.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Projekty</h3>
-                    <p>Spolupracujte na zajímavých projektech s dalšími členy.</p>
+
+                <button class="theme-day-toggle" type="button">SOBOTA: Tělesno v rovnováze<span class="icon-text">+</span></button>
+                <div class="theme-day-content">
+                    <div class="theme-day-content-inner">
+                        <p class="theme-subtitle">(1 Král 19, 3-8)</p>
+                        <p>Prorok Eliáš je naprosto vyčerpán – psychicky, ale hlavně fyzicky. Má za sebou náročné konfrontace a přes míru svých problémů zcela zapomíná, že by se měl postarat i o svou fyzickou pohodu, takže se nakonec dostává do bodu, kdy je mu celkově zle a přeje si zemřít. V této fázi nedokáže uvažovat jasně a s nadhledem. A právě do této situace přichází Boží posel, aby mu připomněl, že je nejprve člověkem, který má své potřeby, a až poté prorokem. Člověk vyčerpaný natolik, že nedokáže fungovat ani základním způsobem, je jako prorok nepoužitelný. Proto mu Boží posel připomíná, co je teď pro něj důležité – najíst se a odpočinout si. Až poté může konat velké věci.</p>
+                        <p>Eliášův příběh je velmi povzbudivý. Ukazuje nám totiž, že ani velkým prorokům se nevyhýbaly krize, únava, malomyslnost, vyčerpání, rezignace. Připomíná nám, že máme-li mít sílu starat se o druhé a konat to, co od nás žádá Bůh, musíme se nejprve postarat o sebe. Psychika a tělesno se sice navzájem ovlivňují, ale tento příběh i moderní tzv. „pyramida potřeb" nám ukazují, že nejprve je potřeba se postarat o své základní fyziologické potřeby a teprve poté můžeme pookřát psychicky, popřípadě duchovně.</p>
+                        <p>Naše tělo je svatý chrám a aby se v něm mohla uskutečňovat člověko-služba a boho-služba, nemůže být v troskách. Díky tělu jsme fyzickou součástí světa. Často však svou existenci prožíváme jen ve své hlavě, odtrženi od těla. Tělo s sebou taháme jako nějaký přepravní prostředek, přepínáme své fyzické síly a nestaráme se o ně dobře. Naše tělo se nám stává nástrojem a často i otrokem k dosažení svých cílů, které nosíme v hlavě. Přitom zapomínáme na to, že naše tělo je živý organismus – chrám, který je určen k tomu, aby se stal posvěcením. Skrze nás (a tedy i naše tělo) má do hmotného světa přicházet požehnání. Naše tělo má být nejprve posvěcováno Bohem, abychom pak mohli svou přítomností posvěcovat svět a také druhé lidi, se kterými se setkáme.</p>
+                    </div>
+                </div>
+
+                <button class="theme-day-toggle" type="button">NEDĚLE: Sociální život v rovnováze<span class="icon-text">+</span></button>
+                <div class="theme-day-content">
+                    <div class="theme-day-content-inner">
+                        <p class="theme-subtitle">(Gen 2, 25-29; Lk 22, 14-20; Sk 2, 42-47; Ef 5, 21-33)</p>
+                        <p>Úryvek z knihy Genesis o stvoření člověka se čte obvykle z perspektivy člověka – jako zpráva o tom, kdo je člověk a jaký je jeho původ. Ovšem v pozadí toho, kým je opravdu člověk, stojí to, kým je sám Bůh. Není to primárně člověk, kdo žije ve vztazích, ale Bůh, který je společenstvím osob. Autor knihy Genesis nemohl mít ponětí o vnitřním trojičním životě Boha, který se církvi rozkryl až o mnohá staletí později, ale přesto tuto skutečnost intuitivně pojmenovává. Zprostředkovává nám poznání, že Bůh Izraele není „single", ale je to Bůh společenský – jeho podstatou je život ve vztazích a ve společenství osob. Člověk je Božím obrazem – to znamená, že je stvořen z lásky a pro lásku a má žít ve vztazích, jako jeho Stvořitel.</p>
+                        <p>Sociální rozměr křesťanského života ukázal sám Kristus – setkával se s chudými, nemocnými, stoloval se sociálně vyloučenými, scházel se ke stolování s učedníky, během stolování v okruhu svých blízkých ustanovil Eucharistii. Společné jídlo a modlitba byly jedním z hlavních rysů prvních křesťanských společenství. Křesťanské komunity se však scházely také k tomu, aby se apoštolové navzájem radili, společně rozhodovali, řešili problémy, přerozdělovali zdroje a aby se o sebe navzájem starali. Církev jakoby přirozeně od Krista převzala štafetu a plynule pokračovala v tvorbě křesťanských společenství, která se postupně rozšířila do celého světa.</p>
+                        <p>Náš společenský život se tedy neodvíjí přednostně od toho, nakolik se setkáváme s lidmi, ale nakolik se setkáváme s Kristem, respektive s celou Trojicí (s Bohem). Podle toho, jak a nakolik rozvíjíme vztah s Bohem Otcem, Duchem Svatým a Kristem, se pak rozvíjí i naše vztahy. Vztah ke každé osobě Trojice je jedinečný a učí nás něco jiného. Máme-li tedy žít zdravé 3D vztahy, podle Božího obrazu, musíme nejprve žít ve vztahu s tím, který je naším obrazem. Svatý Pavel tento princip pochopil velmi dobře. Ve svých listech se vyjadřuje ke vztahům mezi muži a ženami, k manželství, ke svobodnému životu, i ke smíšeným manželstvím. Zvláště v listu Efesanům však zmiňuje, že vztah muže a ženy, pokud má být funkční, musí být zakořeněn v Kristu („V poddanosti Kristu se podřizujte jedni druhým."). Nejprve se tudíž máme ve svém životě podřizovat Kristu, abychom pak byli schopni podřizovat se sobě navzájem ve službě, a ne v nadvládě. Z toho důvodu také svatý Pavel připodobňuje vztah muže a ženy ke vztahu Krista a církve – mají se mít navzájem v úctě a lásce. Proto Pavel přiznává manželství posvěcující sílu – manželství, pokud je v Kristu zakořeněno, je Kristem posvěceno. Toto Pavlovo přirovnání se dá však vztáhnout i na vztahy obecně. Nakolik jsou naše vztahy zakořeněny v Kristu, natolik jsou jím posvěcovány.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Banner -->
+            <div class="program-banner">PROGRAM</div>
+
+            <!-- Program Schedule -->
+            <div id="program-akce">
+                <p class="user-hint">Program AV25 (minulý ročník)</p>
+
+                <!-- ČTVRTEK -->
+                <button class="day-toggle" type="button">Čtvrtek 14. 8. 2025<span class="icon-text">+</span></button>
+                <div class="schedule-content">
+                    <div class="event-timeline">
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">17:00 – 22:00</div>
+                                <strong class="event-title">Příjezd a registrace účastníků</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">19:00 – 20:00</div>
+                                <strong class="event-title">Příležitost ke svátosti smíření</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">20:00 – 21:00</div>
+                                <strong class="event-title">Zahajovací mše svatá</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">21:15 – 22:00</div>
+                                <strong class="event-title">Diskuzní skupinky</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">21:00 – 01:00</div>
+                                    <strong class="event-block-title">Večerní blok</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Čajovna a bar</li>
+                                    <li>Adorace s kytarou (22:00-23:00)</li>
+                                    <li>Tichá noční adorace (21:00-07:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PÁTEK -->
+                <button class="day-toggle" type="button">Pátek 15. 8. 2025<span class="icon-text">+</span></button>
+                <div class="schedule-content">
+                    <div class="event-timeline">
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">7:00 – 8:10</div>
+                                    <strong class="event-title">Ranní program</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Ranní chvály s řeholníky (7:00-7:30)</li>
+                                    <li>Rozcvička (7:15-7:30)</li>
+                                    <li>Moderovaná modlitba (7:45-8:10)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">9:00 – 12:00</div>
+                                <strong class="event-title">Psychologické poradny</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">9:30 – 11:00</div>
+                                    <strong class="event-block-title">Dopolední blok</strong>
+                                </div>
+                                <p class="event-subtitle">Přednášky, workshopy a aktivity:</p>
+                                <ul class="event-list">
+                                    <li><span class="event-list-item-link" data-lecturer="pavel-pola">Pavel Pola (Modlitba a solidarita v těžkých časech)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="jakub-guttner">Jakub Güttner (Kariéra? Rodina? Služba?)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="finance-panel">Finance přednáška (Milan Janás, Karel Nedvěd, Antonín Ettler)</span></li>
+                                    <li>Speed dating (Jan Bleha)</li>
+                                    <li>Míchání drinků (Jan Vak)</li>
+                                    <li>Kurz fotografie (O. Soukup)</li>
+                                    <li>Osobní rozvoj (H. Macková)</li>
+                                    <li>Filmové exercicie: promítání a diskuze (Petr Hruška)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">11:10 – 11:55</div>
+                                <strong class="event-title">Diskuzní skupinky</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">12:00 – 12:10</div>
+                                <strong class="event-title">Modlitba u kříže</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">12:00 – 18:00</div>
+                                    <strong class="event-title">Odpolední nabídka</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Psychologické poradny (13:00-18:00)</li>
+                                    <li>Prezentace projektů (12:30-17:30)</li>
+                                    <li>Čajovna a bar (13:00-16:00)</li>
+                                    <li>Beach volejbal (13:00-14:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">14:00 – 15:30</div>
+                                    <strong class="event-block-title">Odpolední blok I</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li><span class="event-list-item-link" data-lecturer="manzelstvi-panel">Panelová diskuze: Manželství - stojí nám za to? (manželé Pixovi a Vejmělkovi)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="klara-malinakova">Klára Maliňáková (Obraz Boha „v hlavě" a „v srdci")</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="terezie-tuckova">Terezie Tučková (Potřeba těla vztahovat se a být v propojení)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="marek-drapal">Marek Drápal (Křesťan a životní prostředí)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="finance-panel-workshop">Finance workshop (Milan Janás, Karel Nedvěd, Antonín Ettler)</span></li>
+                                    <li>Speed dating (Jan Bleha)</li>
+                                    <li>Blind dating (Petr Hofírek)</li>
+                                    <li>Plánování a management (Jakub Holešínský)</li>
+                                    <li>Míchání drinků (Jan Vak)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">15:30 – 18:00</div>
+                                <strong class="event-title">Přímluvná modlitba a zpověď</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">16:00 – 17:30</div>
+                                <strong class="event-block-title">Odpolední blok II: Setkání regionů</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">18:00 – 19:00</div>
+                                <strong class="event-title">Mše svatá</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">20:00 – ...</div>
+                                    <strong class="event-block-title">Večerní blok</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Křížová cesta (20:00-21:00)</li>
+                                    <li>Chválový večer (20:30-22:00)</li>
+                                    <li>Táborák (20:00-22:00)</li>
+                                    <li>Fotokoutek (21:00-22:00)</li>
+                                    <li>Adorace s kytarou (22:00-23:00)</li>
+                                    <li>Čajovna a bar (20:00-01:00)</li>
+                                    <li>Celonoční tichá adorace (19:00-07:00)</li>
+                                    <li>Přímluvná modlitba a zpověď (20:00-22:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOBOTA -->
+                <button class="day-toggle" type="button">Sobota 16. 8. 2025<span class="icon-text">+</span></button>
+                <div class="schedule-content">
+                    <div class="event-timeline">
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">7:00 – 8:10</div>
+                                    <strong class="event-title">Ranní program</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Ranní chvály (7:00-7:30)</li>
+                                    <li>Rozcvička (7:15-7:30)</li>
+                                    <li>Moderovaná modlitba (7:45-8:10)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">9:00 – 12:00</div>
+                                <strong class="event-title">Psychologické poradny</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">9:30 – 11:00</div>
+                                    <strong class="event-block-title">Dopolední blok</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li><span class="event-list-item-link" data-lecturer="petr-havlicek">Petr Havlíček (Rovnováha v sobě, rovnováha v jídle)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="pavel-vosoba">Pavel Vosoba (Zrození duchovní osobnosti)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="michael-martinek">Michael Martinek (O čem Ježíš nemluvil?)</span></li>
+                                    <li>Uvaž si květinu (Kytimiti | Michaela Vahalíková)</li>
+                                    <li>Speed dating (Jan Bleha)</li>
+                                    <li>Praktický úvod do modlitby Examen (Petr Hruška)</li>
+                                    <li>Podnikání (Jakub Holešínský)</li>
+                                    <li>Šerm (Robert Waschka, začátek 9:00)</li>
+                                    <li>Lukostřelba (Jan Vak)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">11:15 – 11:50</div>
+                                <strong class="event-title">Diskuzní skupinky</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">12:00 – 12:10</div>
+                                <strong class="event-title">Modlitba u kříže</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">13:00 – 18:00</div>
+                                    <strong class="event-title">Odpolední nabídka</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Psychologické poradny (13:00-18:00)</li>
+                                    <li>Prezentace projektů (13:00-14:00)</li>
+                                    <li>Čajovna a bar (13:00-16:00)</li>
+                                    <li>Beach volejbal (13:00-14:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">14:00 – 15:30</div>
+                                    <strong class="event-block-title">Odpolední blok I</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li><span class="event-list-item-link" data-lecturer="pavel-pokorny">Pavel Pokorný (Kde máme těžiště?)</span></li>
+                                    <li><span class="event-list-item-link" data-lecturer="daniela-kucova">Daniela Kucová (Skrze krizi k víře)</span></li>
+                                    <li>Mluvený projev, prezentování (J. Železný)</li>
+                                    <li>Ludmila Lázničková (Anatomie lásky)</li>
+                                    <li><span class="event-list-item-link" data-lecturer="pavel-vosoba">Pavel Vosoba (Zrození duchovní osobnosti)</span></li>
+                                    <li>Míchání drinků (Jan Vak)</li>
+                                    <li>Paralela tance a vztahu (Ondřej Chrástecký)</li>
+                                    <li>Ochutnávky piv (P. Hofírek)</li>
+                                    <li>Šerm (Robert Waschka)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">15:30 – 18:00</div>
+                                <strong class="event-title">Přímluvná modlitba a zpověď</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">16:00 – 17:30</div>
+                                    <strong class="event-block-title">Odpolední blok II</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Prohlídka kulturních památek</li>
+                                    <li>Sportovní aktivity</li>
+                                    <li>Projížďka na koloběžkách (O. Kabelka)</li>
+                                    <li>Blind dating</li>
+                                    <li>Čajovna a bar</li>
+                                    <li>Beach volejbal (16:00-17:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">18:00 – 19:00</div>
+                                <strong class="event-title">Mše svatá a společné focení</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">20:00 – ...</div>
+                                    <strong class="event-block-title">Večerní blok</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Koncert + bar (20:00-21:30)</li>
+                                    <li>Cimbálová muzika + bar (od 21:30)</li>
+                                    <li>Večer modliteb ve stylu Taizé (20:30-22:00, nácvik od 19:45)</li>
+                                    <li>Moderovaná adorace (22:00-23:00)</li>
+                                    <li>Celovečerní tichá adorace (19:00-07:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEDĚLE -->
+                <button class="day-toggle" type="button">Neděle 17. 8. 2025<span class="icon-text">+</span></button>
+                <div class="schedule-content">
+                    <div class="event-timeline">
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">7:00 – 8:10</div>
+                                    <strong class="event-title">Ranní program</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li>Ranní chvály (7:00-7:30)</li>
+                                    <li>Rozcvička (7:15-7:30)</li>
+                                    <li>Moderovaná modlitba (7:45-8:10)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-details-block">
+                                <div class="event-header">
+                                    <div class="event-time">9:30 – 11:00</div>
+                                    <strong class="event-block-title">Dopolední blok</strong>
+                                </div>
+                                <ul class="event-list">
+                                    <li><span class="event-list-item-link" data-lecturer="jana-biescad">Jana Bieščad (Sexualita: Problém anebo výzva?)</span></li>
+                                    <li>Svědectví mého života naruby aneb s Bohem není nic nemožné (Martin Zámečník)</li>
+                                    <li>Soft skills - 7 Návyků skutečně efektivních lidí (Pavel Chabiniok)</li>
+                                    <li><span style="text-decoration: line-through;"><span class="event-list-item-link" data-lecturer="mikulas-vymetal">Mikuláš Vymětal (Mosty místo zdí: Mezináboženský dialog)</span></span><span class="event-list-item-link" data-lecturer="mikulas-vymetal"> (zrušeno)</span></li>
+                                    <li>Taekwondo (Jiří Polakov)</li>
+                                    <li>Výroba rostlinných jogurtů (Lucie Poppová)</li>
+                                    <li>Modlitba Examen (V. Hladík / V. Hrušková) (9:30-10:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">11:00 – 12:00</div>
+                                <strong class="event-title">Zpověď a duchovní rozhovory</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">11:05 – 11:55</div>
+                                <strong class="event-title">Hodnotící skupinky</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">12:00 – 13:15</div>
+                                <strong class="event-title">Závěrečná mše svatá a informační okénko</strong>
+                            </div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-dot"></div>
+                            <div class="event-header">
+                                <div class="event-time">od 13:15</div>
+                                <strong class="event-title">Ukončení setkání a odjezd</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lecturer Modal -->
+            <div id="lecturerModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div id="modal-content-body" class="clearfix"></div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <footer id="contact" class="footer">
-        <div class="container">
-            <h2>Kontakt a informace</h2>
-            <p>&copy; 2026 Absolventský palhrad. Všechna práva vyhrazena.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">Email</a>
-                <a href="#" class="social-link">LinkedIn</a>
+        <!-- Gallery -->
+        <div id="gallery" class="gallery-container">
+            <!-- Gallery items dynamically added by JS -->
+        </div>
+
+        <!-- Inline Video Section -->
+        <div class="section-container">
+            <div class="section-divider"></div>
+            <div id="video-section" class="video-section">
+                <div class="video-inline-container">
+                    <div class="video-container">
+                        <iframe id="youtubeVideo" title="YouTube video player" data-src="https://www.youtube-nocookie.com/embed/_aZ-Nh3NvbU?si=4FfFY_oswlYiDk4E&autoplay=1&mute=1" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
 
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Registration Section -->
+        <div class="section-container">
+            <a name="registrace" id="registrace"></a>
+            <p class="section-banner registrace">REGISTRACE DOBROVOLNÍKŮ<br><strong>11. 3. 2027, čtvrtek od 19 hod</strong></p>
+
+            <div class="registration-text-block">
+                <p class="section-text">Registrace dobrovolníků pro AV27 bude spuštěna 11. 3. 2027. Bližší informace budou zveřejněny na sociálních sítích.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider"></div>
+
+            <!-- Team Section -->
+            <a name="av_tym" id="av_tym"></a>
+            <p class="section-banner tym">PŘÍPRAVNÝ TÝM</p>
+            <p class="section-text" style="margin-top: 20px;">Přípravný tým AV27 bude brzy představen na sociálních sítích. Těšíme se na Tebe!</p>
+            <p><img class="team-photo" src="img/team_photo.jpg" alt="Přípravný tým"></p>
+
+            <!-- Supporters -->
+            <div class="supporters-section">
+                <p class="section-banner podporovatele">PODPOROVATELÉ</p>
+                <div class="logos-grid">
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.cirkev.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/cbk.jpg" alt="Logo Česká biskupská konference"></a></div>
+                        <p>Česká biskupská konference</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.ado.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/diecezeolomouc.png" alt="Logo Olomoucké arcibiskupství"></a></div>
+                        <p>Olomoucké arcibiskupství</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.biskupstvi.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/diecezebrno.png" alt="Logo Biskupství Brněnské"></a></div>
+                        <p>Biskupství Brněnské</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.doo.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/doo.png" alt="Logo Biskupství Ostravsko-opavské"></a></div>
+                        <p>Biskupství Ostravsko-opavské</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://credonadace.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/credo.png" alt="Logo Credo"></a></div>
+                        <p>Credo</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.siko.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/siko.png" alt="Logo Siko"></a></div>
+                        <p>Siko</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.horicketrubicky.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/petrackovy.png" alt="Logo Petráčkovy hořické trubičky"></a></div>
+                        <p>Petráčkovy hořické trubičky</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.kubesuvmed.cz/" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/kubesovamedova.png" alt="Logo Kubešova medová manufaktura"></a></div>
+                        <p>Kubešova medová manufaktura</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.rosacanina.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/rosacanina.png" alt="Logo Rosa Canina"></a></div>
+                        <p>Rosa Canina</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.gustocafe.cz/" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/cafegape.png" alt="Logo Café Gape"></a></div>
+                        <p>Café Gape</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.vahala.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/vahala.png" alt="Logo Váhala"></a></div>
+                        <p>Váhala</p>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-image-wrapper"><a href="https://www.kotelrychle.cz" target="_blank" rel="noopener noreferrer"><img src="img/sponsors/kotelrychle.png" alt="Logo kotel rychle"></a></div>
+                        <p>Kotel rychle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer / Contact -->
+        <footer id="kontakt">
+            <div class="footer-inner">
+                <img class="footer-logo" src="img/grafika_webu/logo512512.svg" alt="AV Logo">
+                <p class="footer-title">Absolventský Velehrad 2027</p>
+                <p class="footer-info">Kozí 684/8, 602 00 Brno</p>
+                <p class="footer-info">+420 605 871 039</p>
+                <p class="footer-info"><a href="mailto:info@absolventskyvelehrad.cz">info@absolventskyvelehrad.cz</a></p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/absolventskyvelehrad" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com/absolventskyvelehrad" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

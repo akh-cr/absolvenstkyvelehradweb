@@ -1,0 +1,20 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Curve -->
+  <path 
+    d="M100,200 C150,50 400,50 500,200 
+       C550,300 300,550 150,400 
+       C50,300 50,350 100,200 Z" 
+    stroke="#c0c0c0" 
+    fill="none" 
+    stroke-width="2.5" 
+  />
+  <!-- Inner Curve -->
+  <path 
+    d="M150,250 C180,150 370,150 450,250 
+       C480,310 310,500 200,380 
+       C120,310 120,330 150,250 Z" 
+    stroke="#c0c0c0" 
+    fill="none" 
+    stroke-width="2.5" 
+  />
+</svg>
