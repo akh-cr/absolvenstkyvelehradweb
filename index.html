@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Absolventský Velehrad 2027</title>
+    <meta name="description" content="Absolventský Velehrad 2027 – čtyřdenní setkání mladých lidí na poutním místě Velehrad, 19.–22. 8. 2027. Přednášky, workshopy, koncerty, modlitba a společenství.">
     <link rel="icon" type="image/svg+xml" href="img/grafika_webu/logo512512.svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Preload critical hero assets -->
+    <link rel="preload" href="img/grafika_webu/velehrad.svg" as="image">
+    <link rel="preload" href="img/grafika_webu/sun.svg" as="image">
+
+    <!-- Google Fonts with display=swap -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+
+    <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +31,7 @@
     <nav id="main-nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <img src="img/grafika_webu/logo512512.svg" alt="AV Logo">
+                <img src="img/grafika_webu/logo512512.svg" alt="AV Logo" width="32" height="32">
                 <span class="nav-logo-text">Absolventský Velehrad</span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -40,7 +54,7 @@
         <div class="layer-background layer" data-depth="0.10" data-type="parallax"></div>
         <div class="layer-1 layer" data-depth="0.20" data-type="parallax">
             <div class="layer1-content">
-                <img src="img/grafika_webu/logo512512.svg" alt="Logo" class="layer1-logo">
+                <img src="img/grafika_webu/logo512512.svg" alt="Logo Absolventský Velehrad" class="layer1-logo" width="130" height="130">
                 <h2 class="layer1-title">Absolventský<br>Velehrad 2027</h2>
                 <div class="layer1-subtitle">
                     <hr class="subtitle-line">
@@ -638,7 +652,7 @@
         <!-- Footer / Contact -->
         <footer id="kontakt">
             <div class="footer-inner">
-                <img class="footer-logo" src="img/grafika_webu/logo512512.svg" alt="AV Logo">
+                <img class="footer-logo" src="img/grafika_webu/logo512512.svg" alt="AV Logo" width="55" height="55">
                 <p class="footer-title">Absolventský Velehrad 2027</p>
                 <p class="footer-info">Kozí 684/8, 602 00 Brno</p>
                 <p class="footer-info">+420 605 871 039</p>
@@ -651,10 +665,7 @@
         </footer>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts - lightGallery loaded on demand, main script deferred -->
+    <script src="script.js" defer></script>
 </body>
 </html>

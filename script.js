@@ -287,7 +287,7 @@ function initializeGallery() {
 
     const galleryItems = [];
 
-    const createImageItem = (imageSrc) => {
+    const createImageItem = (imageSrc, index) => {
         const thumbSrc = imageSrc.replace('/full/', '/thumb/');
         const item = document.createElement('div');
         item.classList.add('gallery-item');
@@ -297,6 +297,9 @@ function initializeGallery() {
         const img = document.createElement('img');
         img.src = thumbSrc;
         img.loading = 'lazy';
+        img.alt = 'Fotografie z Absolventského Velehradu ' + (index + 1);
+        img.width = 400;
+        img.height = 300;
         item.appendChild(img);
         return item;
     };
@@ -324,7 +327,7 @@ function initializeGallery() {
 
     let keywordIndex = 0;
     imagePaths.forEach((imagePath, i) => {
-        const imageItem = createImageItem(imagePath);
+        const imageItem = createImageItem(imagePath, i);
         galleryItems.push(imageItem);
 
         if (keywordIndex < shuffledKeywords.length && (i + 1) % interval === 0) {
@@ -338,15 +341,41 @@ function initializeGallery() {
 
     galleryItems.forEach(item => galleryContainer.appendChild(item));
 
-    // Initialize lightGallery if available
-    if (typeof lightGallery !== 'undefined') {
-        lightGallery(galleryContainer, {
-            selector: '.gallery-item:not(.keyword-item)',
-            plugins: [lgThumbnail, lgZoom],
-            thumbnail: true,
-            zoom: true,
-            actualSize: true,
-            preload: 2,
+    // Lazy-load lightGallery scripts when gallery scrolls into view
+    const loadLightGallery = () => {
+        const scripts = [
+            'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js',
+            'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js',
+            'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js'
+        ];
+        let loaded = 0;
+        const onAllLoaded = () => {
+            if (typeof lightGallery !== 'undefined') {
+                lightGallery(galleryContainer, {
+                    selector: '.gallery-item:not(.keyword-item)',
+                    plugins: [lgThumbnail, lgZoom],
+                    thumbnail: true,
+                    zoom: true,
+                    actualSize: true,
+                    preload: 2,
+                });
+            }
+        };
+        scripts.forEach(src => {
+            const s = document.createElement('script');
+            s.src = src;
+            s.onload = () => { loaded++; if (loaded === scripts.length) onAllLoaded(); };
+            document.body.appendChild(s);
         });
-    }
+    };
+
+    const galleryObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadLightGallery();
+                galleryObserver.disconnect();
+            }
+        });
+    }, { rootMargin: '200px' });
+    galleryObserver.observe(galleryContainer);
 }
